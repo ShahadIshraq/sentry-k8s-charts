@@ -1,0 +1,6 @@
+apiVersion: v2
+name: automq-kafka
+description: AutoMQ Kafka for Sentry event streaming with S3 storage
+type: application
+version: 0.1.0
+appVersion: "latest"

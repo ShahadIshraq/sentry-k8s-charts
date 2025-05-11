@@ -1,0 +1,23 @@
+apiVersion: v2
+name: sentry
+description: Helm chart for deploying Sentry on Kubernetes
+type: application
+version: 0.1.0
+appVersion: "22.5.0"
+dependencies:
+  - name: postgresql
+    version: ~0.1.0
+    repository: "file://../postgresql"
+    condition: postgresql.enabled
+  - name: redis
+    version: ~0.1.0
+    repository: "file://../redis"
+    condition: redis.enabled
+  - name: automq-kafka
+    version: ~0.1.0
+    repository: "file://../automq-kafka"
+    condition: kafka.enabled
+  - name: clickhouse
+    version: ~0.1.0
+    repository: "file://../clickhouse"
+    condition: clickhouse.enabled
